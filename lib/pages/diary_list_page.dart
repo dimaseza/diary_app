@@ -6,8 +6,6 @@ class DiaryListPage extends StatefulWidget {
 }
 
 class _DiaryListPageState extends State<DiaryListPage> {
-  bool _isDark = false;
-
   // MORNING
   final morningStartTime = DateTime(
     DateTime.now().year,

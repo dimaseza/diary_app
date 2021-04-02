@@ -73,9 +73,15 @@ class _DetailPageState extends State<DetailPage> {
               Container(
                 height: SizeConfig.heightMultiplier * 50,
                 width: double.infinity,
-                child: Image.file(
-                  diaryData.image,
-                  fit: BoxFit.cover,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: diaryData.image == null
+                        ? NetworkImage("https://source.unsplash.com/random/")
+                        : FileImage(
+                            diaryData.image,
+                          ),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
               Container(
